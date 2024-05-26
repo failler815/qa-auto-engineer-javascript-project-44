@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import name from "../src/cli.js" ;
-console.log(`Hello, ${name}!`); 
+import {hello} from "../src/index.js" ;
+hello();
+
 
