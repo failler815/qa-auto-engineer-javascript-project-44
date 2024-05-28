@@ -12,7 +12,9 @@
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-nod" : "bin/brain-nod.js",
+    "brain-progression" : "bin/brain-noprogression.js"
   },
   "dependencies": {
     "lodash": "^4.17.21",

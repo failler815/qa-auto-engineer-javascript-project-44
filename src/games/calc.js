@@ -14,14 +14,14 @@ while (correct < 3 && uncorrect < 1) {
     const randomNumber2 =randomNumber();
     const randomOperator = operators[Math.floor(Math.random() * operators.length)];
     const randomOperation = `${randomNumber1} ${randomOperator} ${randomNumber2}`
-    const result = eval(randomOperation);
+    const correctAnswer = eval(randomOperation);
     console.log(`question: ${randomOperation}`);
     const yourAnswer = readlineSync.question('Your answer: ');
 if (parseInt(result) === parseInt(yourAnswer)) {
     console.log('Correct!'); 
     correct++ 
 } else {
-console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${eval(randomOperation)}'.`) ;
+console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`) ;
 uncorrect++  
 }
 }

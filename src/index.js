@@ -7,3 +7,9 @@ export const hello = () => {
     console.log(`Hello, ${name}!`);
     return name;
 };
+/*
+const short = () => {
+while (correct < 3 && uncorrect < 1)
+if (yourAnswer === correctAnswer)
+};
+*/
