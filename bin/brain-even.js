@@ -1,2 +1,2 @@
-import { getQuestionAndAnswer } from "../src/games/even.js";
-getQuestionAndAnswer();
+import { evenFunction } from "../src/games/even.js";
+evenFunction();
