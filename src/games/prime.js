@@ -1,9 +1,7 @@
-import readlineSync from "readline-sync";
-import { randomNumber, hello, mainFunctions } from "../index.js";
+import { randomNumber, mainFunctions } from "../index.js";
 
-const userName = hello();
-
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isSimple = (num) => {
   if (num <= 1) {
@@ -18,10 +16,10 @@ const isSimple = (num) => {
 
 export const primeFunction = () => {
   const randomNumberInt = randomNumber(1, 10);
-  console.log(`Question: ${randomNumberInt}`);
+  const question = randomNumberInt;
   const correctAnswer = isSimple(randomNumberInt) ? "yes" : "no";
-  const yourAnswer = readlineSync.question("Your answer: ");
-  return { yourAnswer, correctAnswer };
+  return { question, correctAnswer };
 };
 
-mainFunctions(primeFunction, userName);
+const prime = () => mainFunctions(description, primeFunction);
+export default prime;

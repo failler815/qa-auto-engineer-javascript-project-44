@@ -1,10 +1,7 @@
-import readlineSync from "readline-sync";
-import { randomNumber, hello, mainFunctions } from "../index.js";
-
-const userName = hello();
+import { randomNumber, mainFunctions } from "../index.js";
 
 const progressionLenght = 10;
-console.log("What number is missing in the progression?");
+const description = "What number is missing in the progression?";
 
 const ProgressionAr = () => {
   let progressionNum = randomNumber(0, 50);
@@ -21,10 +18,10 @@ const ProgressionAr = () => {
 export const progressionFunction = () => {
   const progression = ProgressionAr();
   const randomDot = randomNumber(0, progressionLenght);
-  const correctAnswer = progression[randomDot];
+  const correctAnswer = progression[randomDot].toString();
   progression[randomDot] = "..";
-  console.log(`question: ${progression}`);
-  const yourAnswer = parseInt(readlineSync.question("Your answer: "));
-  return { yourAnswer, correctAnswer };
+  const question = progression;
+  return { question, correctAnswer };
 };
-mainFunctions(progressionFunction, userName);
+const progression = () => mainFunctions(description, progressionFunction);
+export default progression;

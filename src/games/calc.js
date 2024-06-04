@@ -1,8 +1,6 @@
-import readlineSync from "readline-sync";
-import { randomNumber, hello, mainFunctions } from "../index.js";
+import { randomNumber, mainFunctions } from "../index.js";
 
-const userName = hello();
-console.log("What is the result of the expression?");
+const description = "What is the result of the expression?";
 
 export const expansionResult = () => {
   const operators = ["+", "-", "*"];
@@ -11,12 +9,12 @@ export const expansionResult = () => {
   const randomOperator =
     operators[Math.floor(Math.random() * operators.length)];
   const randomOperation = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-  const correctAnswer = parseInt(eval(randomOperation));
-  console.log(`question: ${randomOperation}`);
-  const yourAnswer = parseInt(readlineSync.question("Your answer: "));
-  return { correctAnswer, yourAnswer };
+  const correctAnswer = eval(randomOperation).toString();
+  const question = randomOperation;
+  return { correctAnswer, question };
 };
-mainFunctions(expansionResult, userName);
+const calc = () => mainFunctions(description, expansionResult);
+export default calc;
 
 /*
     while (correct < 3 && uncorrect < 1) {

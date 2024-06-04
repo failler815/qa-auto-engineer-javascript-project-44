@@ -1,2 +1,3 @@
-import { evenFunction } from "../src/games/even.js";
-evenFunction();
+import even from "../src/games/even.js";
+
+even();

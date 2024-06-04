@@ -6,18 +6,20 @@ export const randomNumber = (minRange, maxRange) => {
   return randomNumber;
 };
 
-export const hello = () => {
+export const mainFunctions = (description, generateRound) => {
   console.log(`Welcome to the Brain Games!`);
   const name = readlineSync.question("May I have your name?: ");
   console.log(`Hello, ${name}!`);
-  return name;
-};
 
-export const mainFunctions = (fn, userName) => {
+  console.log(description);
+
   let correct = 0;
   let uncorrect = 0;
   while (correct < 3 && uncorrect < 1) {
-    const { yourAnswer, correctAnswer } = fn();
+    const rand = generateRound();
+    const { question, correctAnswer } = rand;
+    console.log(`Question: ${question}`);
+    const yourAnswer = readlineSync.question("Your answer: ");
     if (correctAnswer === yourAnswer) {
       console.log("Correct!");
       correct++;
@@ -28,7 +30,7 @@ export const mainFunctions = (fn, userName) => {
       uncorrect++;
     }
     if (correct === 3) {
-      console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${name}!`);
     }
   }
 };

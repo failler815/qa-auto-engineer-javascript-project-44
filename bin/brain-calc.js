@@ -1,2 +1,2 @@
-import { expansionResult } from "../src/games/calc.js";
-expansionResult();
+import calc from "../src/games/calc.js";
+calc();

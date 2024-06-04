@@ -1,2 +1,2 @@
-import { primeFunction } from "../src/games/prime.js";
-primeFunction();
+import prime from "../src/games/prime.js";
+prime();

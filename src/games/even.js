@@ -1,20 +1,18 @@
-import readlineSync from "readline-sync";
-import { randomNumber, hello, mainFunctions } from "../index.js";
+import { randomNumber, mainFunctions } from "../index.js";
 
-const userName = hello();
-console.log('Answer "yes" if the number is even, otherwise answer "no"');
+const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const isEven = (number) => number % 2 === 0;
 
 export const evenFunction = () => {
   const randomNumberInt = randomNumber(0, 10);
-  console.log(`Question: ${randomNumberInt}`);
-  const yourAnswer = readlineSync.question("Your answer: ");
+  const question = randomNumberInt;
   const correctAnswer = isEven(randomNumberInt) ? "yes" : "no";
-
-  return { yourAnswer, correctAnswer };
+  return { question, correctAnswer };
 };
-mainFunctions(evenFunction, userName);
+
+const even = () => mainFunctions(description, evenFunction);
+export default even;
 
 /*
  const getQuestionAndAnswer = () => {

@@ -1,5 +1,2 @@
-import { findNOD } from "../src/games/nod.js";
-findNOD ();
-
-
-
+import nod from "../src/games/nod.js";
+nod();

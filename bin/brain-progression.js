@@ -1,2 +1,2 @@
-import { progressionFunction } from "../src/games/progression.js";
-progressionFunction();
+import progression from "../src/games/progression.js";
+progression();
