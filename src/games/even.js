@@ -1,4 +1,4 @@
-import { randomNumber, mainFunctions } from "../index.js";
+import { randomNumber, runGame } from "../index.js";
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
@@ -11,7 +11,7 @@ export const evenFunction = () => {
   return { question, correctAnswer };
 };
 
-const even = () => mainFunctions(description, evenFunction);
+const even = () => runGame(description, evenFunction);
 export default even;
 
 /*

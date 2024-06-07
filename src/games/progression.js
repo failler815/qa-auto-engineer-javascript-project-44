@@ -1,4 +1,4 @@
-import { randomNumber, mainFunctions } from "../index.js";
+import { randomNumber, runGame } from "../index.js";
 
 const progressionLenght = 10;
 const description = "What number is missing in the progression?";
@@ -23,5 +23,5 @@ export const progressionFunction = () => {
   const question = progression;
   return { question, correctAnswer };
 };
-const progression = () => mainFunctions(description, progressionFunction);
+const progression = () => runGame(description, progressionFunction);
 export default progression;

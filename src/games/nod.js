@@ -1,25 +1,25 @@
-import { randomNumber, mainFunctions } from "../index.js";
+import { randomNumber, runGame } from "../index.js";
 
 const description = "Find the greatest common divisor of given numbers.";
-const isNod = (firstCase, secondCase) => {
+const getNod = (firstCase, secondCase) => {
   if (firstCase === 0 || secondCase === 0) {
     return firstCase + secondCase;
   } else if (firstCase > secondCase) {
-    return isNod(firstCase - secondCase, secondCase);
+    return getNod(firstCase - secondCase, secondCase);
   } else {
-    return isNod(firstCase, secondCase - firstCase);
+    return getNod(firstCase, secondCase - firstCase);
   }
 };
 
 export const findNOD = () => {
   const firstNumber = randomNumber(0, 10);
   const secondNumber = randomNumber(0, 10);
-  const correctAnswer = isNod(firstNumber, secondNumber).toString();
+  const correctAnswer = getNod(firstNumber, secondNumber).toString();
   const question = `${firstNumber} ${secondNumber}`;
   return { correctAnswer, question };
 };
 
-const nod = () => mainFunctions(description, findNOD);
+const nod = () => runGame(description, findNOD);
 export default nod;
 
 /*

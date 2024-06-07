@@ -1,19 +1,35 @@
-import { randomNumber, mainFunctions } from "../index.js";
+import { randomNumber, runGame } from "../index.js";
 
 const description = "What is the result of the expression?";
 
+const calculateOperation = (num1, num2, operator) => {
+  switch (operator) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    default:
+      return NaN;
+  }
+};
+
 export const expansionResult = () => {
+  const randomNumber1 = randomNumber(0, 3);
+  const randomNumber2 = randomNumber(0, 3);
   const operators = ["+", "-", "*"];
-  const randomNumber1 = randomNumber(0, 10);
-  const randomNumber2 = randomNumber(0, 10);
-  const randomOperator =
-    operators[Math.floor(Math.random() * operators.length)];
-  const randomOperation = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
-  const correctAnswer = eval(randomOperation).toString();
-  const question = randomOperation;
+  const randomOperator = operators[randomNumber(0, operators.length)];
+  const randomOperation = calculateOperation(
+    randomNumber1,
+    randomNumber2,
+    randomOperator
+  );
+  const correctAnswer = randomOperation.toString();
+  const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   return { correctAnswer, question };
 };
-const calc = () => mainFunctions(description, expansionResult);
+const calc = () => runGame(description, expansionResult);
 export default calc;
 
 /*
