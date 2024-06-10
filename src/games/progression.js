@@ -3,7 +3,7 @@ import { randomNumber, runGame } from "../index.js";
 const progressionLenght = 10;
 const description = "What number is missing in the progression?";
 
-const ProgressionAr = () => {
+const makeProgression = () => {
   let progressionNum = randomNumber(0, 50);
   const step = randomNumber(2, 4);
   const progression = [];
@@ -16,7 +16,7 @@ const ProgressionAr = () => {
 };
 
 export const progressionFunction = () => {
-  const progression = ProgressionAr();
+  const progression = makeProgression();
   const randomDot = randomNumber(0, progressionLenght);
   const correctAnswer = progression[randomDot].toString();
   progression[randomDot] = "..";
