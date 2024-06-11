@@ -23,6 +23,7 @@ export const runGame = (description, generateRound) => {
       console.log(
         `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
       );
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
