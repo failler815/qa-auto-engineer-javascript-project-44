@@ -36,7 +36,7 @@ while (correct < 3 && uncorrect < 1) {
 console.log(`Question: ${randomNumberInt}`);
 const yourAnswer = readlineSync.question('Your answer: ');
 if (yourAnswer === correctAnswer) {
-    correct++;
+    correct++;а
     console.log('Correct!')
 } else {
     uncorrect++ 
