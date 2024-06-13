@@ -13,4 +13,3 @@ export const evenFunction = () => {
 
 const even = () => runGame(description, evenFunction);
 export default even;
-

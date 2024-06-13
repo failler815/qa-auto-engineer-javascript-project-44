@@ -1,14 +1,16 @@
 import readlineSync from 'readline-sync';
 
 export const randomNumber = (minRange, maxRange) => {
-  const randomNum = Math.floor( Math.random() * (maxRange - minRange) + minRange );
+  const randomNum = Math.floor(
+    Math.random() * (maxRange - minRange) + minRange
+  );
   return randomNum;
 };
 
 export const runGame = (description, generateRound) => {
   console.log(`Welcome to the Brain Games!`);
   const name = readlineSync.question('May I have your name?: ');
-  console.log('Hello,',name+'!');
+  console.log(`Hello, ${name}!`);
 
   console.log(description);
 
@@ -22,7 +24,7 @@ export const runGame = (description, generateRound) => {
       console.log(
         `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
       );
-      console.log("Let's try again,", name+'!');
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }

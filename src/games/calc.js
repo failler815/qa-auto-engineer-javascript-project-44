@@ -23,7 +23,8 @@ export const expansionResult = () => {
   const randomOperation = calculateOperation(
     randomNumber1,
     randomNumber2,
-    randomOperator);
+    randomOperator,
+  );
   const correctAnswer = randomOperation.toString();
   const question = `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   return { correctAnswer, question };
