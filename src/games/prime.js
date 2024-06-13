@@ -7,12 +7,11 @@ const isSimple = (num) => {
   if (num <= 1) {
     return false;
   }
-  for (let i = 2; i <= num - 1; i += 1) {
+  for (let i = 2; i <= num - 1; i += 1)
     if (num % i === 0) {
       return false;
     }
-    return true;
-  }
+  return true;
 };
 
 export const primeFunction = () => {
