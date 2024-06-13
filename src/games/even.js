@@ -27,7 +27,8 @@ export default even;
             console.log('Correct!');
             correct++;
         } else {
-            console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+            console.log(`'${yourAnswer}' is wrong answer ;(. 
+                Correct answer was '${correctAnswer}'.`);
             uncorrect++;
     }
     if (correct === 3) {console.log(`Congratulations, ${userName}!`);

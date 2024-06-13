@@ -4,11 +4,11 @@ const description = 'Find the greatest common divisor of given numbers.';
 const getNod = (firstCase, secondCase) => {
   if (firstCase === 0 || secondCase === 0) {
     return firstCase + secondCase;
-  } else if (firstCase > secondCase) {
-    return getNod(firstCase - secondCase, secondCase);
-  } else {
-    return getNod(firstCase, secondCase - firstCase);
   }
+  if (firstCase > secondCase) {
+    return getNod(firstCase - secondCase, secondCase);
+  }
+  return getNod(firstCase, secondCase - firstCase);
 };
 
 export const findNOD = () => {

@@ -29,20 +29,3 @@ export const runGame = (description, generateRound) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-
-/*
-export const getQuestionAndAnswer = (randomFunction) => {
-while (correct < 3 && uncorrect < 1) {
-console.log(`Question: ${randomNumberInt}`);
-const yourAnswer = readlineSync.question('Your answer: ');
-if (yourAnswer === correctAnswer) {
-    correct++;
-    console.log('Correct!')
-} else {
-    uncorrect++ 
-    console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`) ;
-}
-if (correct === 3) {console.log(`Congratulations, ${userName}!`)}
-};
-};ыz
-*/
