@@ -11,7 +11,6 @@ const isSimple = (number) => {
   return true;
 };
 
-
 export const primeFunction = () => {
   const randomNumberInt = randomNumber(2, 10);
   const question = randomNumberInt;
