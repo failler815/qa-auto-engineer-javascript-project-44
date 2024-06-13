@@ -1,14 +1,14 @@
-import { randomNumber, runGame } from "../index.js";
+import { randomNumber, runGame } from '../index.js';
 
-const description = "What is the result of the expression?";
+const description = 'What is the result of the expression?';
 
 const calculateOperation = (num1, num2, operator) => {
   switch (operator) {
-    case "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "*":
+    case '*':
       return num1 * num2;
     default:
       return null;
@@ -18,7 +18,7 @@ const calculateOperation = (num1, num2, operator) => {
 export const expansionResult = () => {
   const randomNumber1 = randomNumber(0, 3);
   const randomNumber2 = randomNumber(0, 3);
-  const operators = ["+", "-", "*"];
+  const operators = ['+', '-', '*'];
   const randomOperator = operators[randomNumber(0, operators.length)];
   const randomOperation = calculateOperation(
     randomNumber1,

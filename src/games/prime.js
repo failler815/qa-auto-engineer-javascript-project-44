@@ -1,4 +1,4 @@
-import { randomNumber, runGame } from "../index.js";
+import { randomNumber, runGame } from '../index.js';
 
 const description =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -17,7 +17,7 @@ const isSimple = (num) => {
 export const primeFunction = () => {
   const randomNumberInt = randomNumber(1, 10);
   const question = randomNumberInt;
-  const correctAnswer = isSimple(randomNumberInt) ? "yes" : "no";
+  const correctAnswer = isSimple(randomNumberInt) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 

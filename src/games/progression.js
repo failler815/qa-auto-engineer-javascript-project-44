@@ -1,7 +1,7 @@
-import { randomNumber, runGame } from "../index.js";
+import { randomNumber, runGame } from '../index.js';
 
 const progressionLenght = 10;
-const description = "What number is missing in the progression?";
+const description = 'What number is missing in the progression?';
 
 const makeProgression = () => {
   let progressionNum = randomNumber(0, 50);
@@ -19,8 +19,8 @@ export const progressionFunction = () => {
   const progression = makeProgression();
   const randomDotIndex = randomNumber(0, progressionLenght);
   const hiddenElement = progression[randomDotIndex];
-  progression[randomDotIndex] = "..";
-  const question = progression.join(" ");
+  progression[randomDotIndex] = '..';
+  const question = progression.join(' ');
   const correctAnswer = hiddenElement.toString();
   return { question, correctAnswer };
 };

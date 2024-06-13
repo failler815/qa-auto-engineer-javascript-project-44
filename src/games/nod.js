@@ -1,6 +1,6 @@
-import { randomNumber, runGame } from "../index.js";
+import { randomNumber, runGame } from '../index.js';
 
-const description = "Find the greatest common divisor of given numbers.";
+const description = 'Find the greatest common divisor of given numbers.';
 const getNod = (firstCase, secondCase) => {
   if (firstCase === 0 || secondCase === 0) {
     return firstCase + secondCase;
