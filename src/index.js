@@ -1,9 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const randomNumber = (minRange, maxRange) => {
-  const randomNum = Math.floor(
-    Math.random() * (maxRange - minRange) + minRange
-  );
+  const randomNum = Math.floor(Math.random() * (maxRange - minRange) + minRange);
   return randomNum;
 };
 
