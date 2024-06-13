@@ -14,8 +14,7 @@ export const runGame = (description, generateRound) => {
   console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
-    const rand = generateRound();
-    const { question, correctAnswer } = rand;
+    const { question, correctAnswer } = generateRound();
     console.log(`Question: ${question}`);
     const yourAnswer = readlineSync.question("Your answer: ");
     if (correctAnswer === yourAnswer) {

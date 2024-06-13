@@ -17,10 +17,11 @@ const makeProgression = () => {
 
 export const progressionFunction = () => {
   const progression = makeProgression();
-  const randomDot = randomNumber(0, progressionLenght);
-  const correctAnswer = progression[randomDot].toString();
-  progression[randomDot] = "..";
-  const question = progression;
+  const randomDotIndex = randomNumber(0, progressionLenght);
+  const hiddenElement = progression[randomDotIndex];
+  progression[randomDotIndex] = "..";
+  const question = progression.join(" ");
+  const correctAnswer = hiddenElement.toString();
   return { question, correctAnswer };
 };
 const progression = () => runGame(description, progressionFunction);
