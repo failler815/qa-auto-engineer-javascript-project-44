@@ -19,9 +19,7 @@ export const runGame = (description, generateRound) => {
     if (correctAnswer === yourAnswer) {
       console.log('Correct!');
     } else {
-      console.log(
-        `'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-      );
+      console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
