@@ -13,7 +13,7 @@ const isSimple = (number) => {
 
 
 export const primeFunction = () => {
-  const randomNumberInt = randomNumber(1, 10);
+  const randomNumberInt = randomNumber(2, 10);
   const question = randomNumberInt;
   const correctAnswer = isSimple(randomNumberInt) ? 'yes' : 'no';
   return { question, correctAnswer };
